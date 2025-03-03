@@ -103,7 +103,8 @@ app.ws("/connect", async (ws, req) => {
   const clientId = Math.random().toString(36).substring(7);
   console.log(`New client connected: ${clientId}`);
 
-  let initialUrl = await getNextUrl();
+  const initialUrl = await getNextUrl();
+
   if (initialUrl) {
     activeUrls.push({
       url: initialUrl,
