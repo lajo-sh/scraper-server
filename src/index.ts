@@ -5,8 +5,6 @@ import Redis from "ioredis";
 import fs from "node:fs";
 import axios from "axios";
 
-const urls = JSON.parse(fs.readFileSync("urls.json", "utf-8"));
-
 const API_KEY = process.env.API_KEY!;
 const BACKEND_API_KEY = process.env.BACKEND_API_KEY!;
 const PORT = process.env.PORT || 8000;
